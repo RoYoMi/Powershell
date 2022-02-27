@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- ID should be lower case, spaces should be replaced with a hyphen, contain no wierd characters -->
+    <id>use-chocolatey</id>
+    <!-- version is a dot separated identifer containing a maximum of 4 numbers, this should match the version included in your .psd1 file -->
+    <version>0.1.14</version>
+    <title>Use-Chocolatey</title>
+    <authors>Roy Miller</authors>
+    <copyright>
+    </copyright>
+    <summary>Handy tools created to automate some of the tedious task involved with packing Chocolatey packages.</summary>
+    <description>Handy tools created to automate some of the tedious task involved with packing Chocolatey packages.</description>
+    <dependencies>
+    </dependencies>
+  </metadata>
+  <files>
+    <!-- All the target for all entries here must be lib, content, build, or tools. See also: https://docs.microsoft.com/en-us/nuget/reference/nuspec#including-assembly-files -->
+    <!-- All your chocolatey related files, keeping these separate keeps the installers cleaner -->
+    <file src="..\Package\**" target="content\Package" />
+    <!-- The components you want packaged into the Chocolatey package-->
+    <file src="..\Use-Chocolatey\**" target="content\Use-Chocolatey" />
+  </files>
+</package>

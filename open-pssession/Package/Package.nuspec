@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>open-pssession</id>
+    <version>0.4.0</version>
+    <title>Open-PsSession</title>
+    <authors>Roy Miller</authors>
+    <copyright>
+    </copyright>
+    <summary>Open-PsSession automates the tedious process of creating a New-PsSession where DNS entries are inaccurate or not existent such as with VPN connected workstations.</summary>
+    <description>When endpoint DNS entries are inaccurate or not existent, e.g. VPN connected workstations, we see New-PsSession will fail to connect to about 40% of a randomly selected set of known online devices. The problem can be worked around if you already know the correct remote IP. But getting this IP reqiures quering several systems and updating your local hosts file. Or accepting a powershell session where certificate confirmation has been disabled.</description>
+    <dependencies>
+      <dependency id="class_customcredential" />
+    </dependencies>
+  </metadata>
+  <files>
+    <!-- All the target for all entries here must be lib, content, build, or tools. See also: https://docs.microsoft.com/en-us/nuget/reference/nuspec#including-assembly-files -->
+    <!-- All your chocolatey related files, keeping these separate keeps the installers cleaner -->
+    <file src="..\Package\**" target="content\Package" />
+    <!-- The components you want packaged into the Chocolatey package-->
+    <file src="..\Open-PsSession\**" target="content\Open-PsSession" />
+  </files>
+</package>

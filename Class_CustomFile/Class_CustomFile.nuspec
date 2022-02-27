@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>Class_CustomFile</id>
+    <version>0.1.2</version>
+    <title>Class_CustomFile</title>
+    <authors>Roy Miller</authors>
+    <copyright></copyright>
+    <summary>This class lowers the barrier of entry for basic file operations by multiple threads via the .Net class System.IO.File.</summary>
+    <description>Commandlets like Out-File are designed for single threaded operations, and will throw errors if the file is already in use by another thread.
+.Net offers several flavors of file interaction, and each has their own complexities and nuances. This class focuses on make it easy.</description>
+    <dependencies>
+    </dependencies>
+  </metadata>
+  <files>
+    <!-- this section controls what actually gets packaged into the Chocolatey package -->
+    <file src="Module\**" target="extension" />
+  </files>
+</package>

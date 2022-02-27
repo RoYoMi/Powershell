@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>class_customcredential</id>
+    <version>0.2.0</version>
+    <title>Class_CustomCredential</title>
+    <authors>Roy Miller</authors>
+    <copyright></copyright>
+    <summary>Powershell class for managing a locally encrypted credential files. This class also automates the process of validating with AD that the credential is valid to prevent account lockouts which could result from foreach -parallel commands.</summary>
+    <description>This class automates the process storing, accessing, and validating credentials which can be tested against a credential manager like AD.
+The idea is that some automation steps might accidently use an old/invalid password which could quickly lock an account if left unchecked.
+Using tools like the Microsoft created powershell module for credential management is also a good option, but does require it to be setup and managed.</description>
+    <dependencies>
+    </dependencies>
+  </metadata>
+  <files>
+    <!-- All the target for all entries here must be lib, content, build, or tools. See also: https://docs.microsoft.com/en-us/nuget/reference/nuspec#including-assembly-files -->
+    <!-- All your chocolatey related files, keeping these separate keeps the installers cleaner -->
+    <file src="..\Package\**" target="content\Package" />
+    <!-- The components you want packaged into the Chocolatey package-->
+    <file src="..\Class_CustomCredential\**" target="content\Class_CustomCredential" />
+  </files>
+</package>
